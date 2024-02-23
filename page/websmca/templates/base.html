@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Proyecto SMCA {% block title %}{% endblock%}</title>
+    {% load static%}
+
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+</head>
+<body>
+    
+<header>
+<a href="{% url 'index' %}">inicio</a>
+<br>
+<a href="{% url 'company' %}">compañia</a>
+<br>
+<a href="{% url 'contact' %}">contactanos</a>
+<br>
+<a href="{% url 'product' %}">productos</a>
+<br>
+
+    <p>pagina de base parte header aqui va codigo de base  </p>
+</header>
+
+
+
+{% block content %}
+{% endblock %}
+
+
+
+
+
+<footer>
+<p> pagina base parte de un footer aqui va codigo de base </p>
+</footer>
+
+<p> desarrollado por majestic</p>
+
+
+<script src = "{% static 'js/script.js' %}"></script>
+
+
+</body>
+</html>
