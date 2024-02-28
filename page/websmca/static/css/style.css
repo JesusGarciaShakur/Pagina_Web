@@ -1,1 +1,43 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
 body {background-color: aquamarine;}
+
+a, li {
+    font-family: 'Roboto',
+    sans-serif;         
+    color: aliceblue;
+}
+
+.logo-header img {
+    width: 50px;
+}
+
+header{
+    background-color: #181818;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 2rem;
+}
+
+.nav-menu ul {
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu li {
+    margin-right: 1.5rem;
+}
+
+.imagen {
+    width: 100%;
+}
+
+.imagen img {
+    width: 100%;
+}

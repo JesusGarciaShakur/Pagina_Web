@@ -1,15 +1,28 @@
 {% extends 'base.html' %}
 
 
-{% block title %} company{% endblock title %}
+{% block title %}company{% endblock title %}
 
 {% load static  %}
 
 
 {% block content  %}
-
-<h2>aqui el contendio de la pagina de compañia</h2>
-
+<div class="who-are-we">
+    <h1>¿Quiénes somos?</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel architecto sint itaque beatae ullam. Earum facere numquam dolorum saepe sequi, voluptate corrupti blanditiis asperiores! Nisi, earum tenetur? Nesciunt, eum. Dolorem.</p>
+    <img src="{% static 'img/equipo1.jpg' %}" alt="" width="374" height="246">
+</div>
+<div class="mision">
+    <h2>Misión</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel architecto sint itaque beatae ullam. Earum facere numquam dolorum saepe sequi, voluptate corrupti blanditiis asperiores! Nisi, earum tenetur? Nesciunt, eum. Dolorem.</p>
+</div>
+<div class="vision">
+    <h2>Visión</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel architecto sint itaque beatae ullam. Earum facere numquam dolorum saepe sequi, voluptate corrupti blanditiis asperiores! Nisi, earum tenetur? Nesciunt, eum. Dolorem.</p>
+</div>
+<br>
+<h2>Contactar empresa</h2>
+<br>
 
 {% endblock %}
 

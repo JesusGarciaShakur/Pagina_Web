@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 
     <meta charset="UTF-8">
@@ -14,16 +14,19 @@
 <body>
     
 <header>
-<a href="{% url 'index' %}">inicio</a>
-<br>
-<a href="{% url 'company' %}">compañia</a>
-<br>
-<a href="{% url 'contact' %}">contactanos</a>
-<br>
-<a href="{% url 'product' %}">productos</a>
-<br>
 
-    <p>pagina de base parte header aqui va codigo de base  </p>
+    <div class="logo-header">
+        <img src="{% static 'img/full-moon.png' %}" alt="">
+    </div>
+    
+    <nav class="nav-menu">
+        <ul>
+            <li><a href="{% url 'index' %}">Inicio</a></li>
+            <li><a href="{% url 'product' %}">Productos</a></li>
+            <li><a href="{% url 'contact' %}">Contactanos</a></li>
+            <li><a href="{% url 'company' %}">Compañia</a></li>
+        </ul>
+    </nav>
 </header>
 
 
