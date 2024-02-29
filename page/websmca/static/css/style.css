@@ -46,9 +46,19 @@ header {
     display: flex;
 }
 
-
-
 .mision-vision {
     display: flex;
 }
 
+.product-section {
+    display: flex;
+}
+
+.left-block {
+    display: flex;
+
+}
+
+.right-block {
+    width: 50%;
+}
