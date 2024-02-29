@@ -1,4 +1,4 @@
-*{
+* {
     padding: 0;
     margin: 0;
     text-decoration: none;
@@ -17,7 +17,7 @@ a, li {
     width: 50px;
 }
 
-header{
+header {
     background-color: #181818;
     display: flex;
     justify-content: space-between;
@@ -41,3 +41,14 @@ header{
 .imagen img {
     width: 100%;
 }
+
+.who-are-we {
+    display: flex;
+}
+
+
+
+.mision-vision {
+    display: flex;
+}
+
