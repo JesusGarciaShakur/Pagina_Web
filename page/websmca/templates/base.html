@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 
     <meta charset="UTF-8">
@@ -11,42 +12,44 @@
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
 
 </head>
+
 <body>
-    
-<header>
 
-    <div class="logo-header">
-        <img src="{% static 'img/full-moon.png' %}" alt="">
-    </div>
-    
-    <nav class="nav-menu">
-        <ul>
-            <li><a href="{% url 'index' %}">Inicio</a></li>
-            <li><a href="{% url 'product' %}">Productos</a></li>
-            <li><a href="{% url 'contact' %}">Contactanos</a></li>
-            <li><a href="{% url 'company' %}">Compañia</a></li>
-        </ul>
-    </nav>
-</header>
+    <header>
 
+        <div class="logo-header">
+            <img src="{% static 'img/logo1.png' %}" alt="">
+        </div>
 
-
-{% block content %}
-{% endblock %}
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="{% url 'index' %}">Inicio</a></li>
+                <li><a href="{% url 'product' %}">Productos</a></li>
+                <li><a href="{% url 'contact' %}">Contactanos</a></li>
+                <li><a href="{% url 'company' %}">Compañia</a></li>
+            </ul>
+        </nav>
+    </header>
 
 
 
+    {% block content %}
+    {% endblock %}
 
 
-<footer>
-<p> pagina base parte de un footer aqui va codigo de base </p>
-</footer>
-
-<p> desarrollado por majestic</p>
 
 
-<script src = "{% static 'js/script.js' %}"></script>
+
+    <footer>
+        <p>MajesTIC</p>
+        <br>
+        <p>Copyright© 2024</p>
+        <p><a href="#">Información legal</a> | <a href="#">Política de privacidad</a></p>
+    </footer>
+
+    <script src="{% static 'js/script.js' %}"></script>
 
 
 </body>
+
 </html>

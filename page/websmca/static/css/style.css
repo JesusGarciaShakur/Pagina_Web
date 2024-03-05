@@ -1,16 +1,18 @@
 * {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding: 0;
     margin: 0;
-    text-decoration: none;
     list-style: none;
 }
 
-body {background-color: aquamarine;}
+body {
+    background-color: #e0f3ff;
+    /* azul claro */
+}
 
-a, li {
-    font-family: 'Roboto',
-    sans-serif;         
-    color: aliceblue;
+a,
+li {
+    color: rgb(0, 0, 0);
 }
 
 .logo-header img {
@@ -18,7 +20,7 @@ a, li {
 }
 
 header {
-    background-color: #181818;
+    background-color: #6bece5;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -62,3 +64,73 @@ header {
 .right-block {
     width: 50%;
 }
+
+/*##################FOOTER####################*/
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    /* Fija el footer */
+    width: 100%;
+    /* Ocupa todo el ancho */
+    bottom: 0;
+}
+
+
+footer p {
+    margin: 1px 0;
+}
+
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/*#################Descargar####################*/
+
+.download {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.download:hover {
+    background-color: #0056b3;
+}
+
+/*##################FAQ####################*/
+/* Estilo de la sección de FAQ */
+.faq-section {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilo de cada pregunta frecuente */
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-item h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.faq-item p {
+    margin-bottom: 0;
+    color: #666;
+}
+
