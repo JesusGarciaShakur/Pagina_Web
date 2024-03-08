@@ -7,6 +7,10 @@
 
 body {
     background-color: #e0f3ff;
+    margin-bottom: 100px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    background-color: #f7f7f7;
     /* azul claro */
 }
 
@@ -20,11 +24,13 @@ li {
 }
 
 header {
-    background-color: #6bece5;
+    background-color: #9abde6b4;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: .5rem 2rem;
+    /* position: fixed; */
+    width: 100;
 }
 
 .nav-menu ul {
@@ -68,14 +74,15 @@ header {
 /*##################FOOTER####################*/
 
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: #33333367;
+    color: #1b1818;
     text-align: center;
     position: fixed;
     /* Fija el footer */
     width: 100%;
     /* Ocupa todo el ancho */
     bottom: 0;
+    height: 80PX;
 }
 
 
@@ -85,7 +92,7 @@ footer p {
 
 
 footer a {
-    color: #fff;
+    color: #000000;
     text-decoration: none;
 }
 
@@ -133,4 +140,104 @@ footer a:hover {
     margin-bottom: 0;
     color: #666;
 }
+/*##################FORMULARIO FAQ####################*/
+  h1 {
+    text-align: center;
+    color: #007bff;
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+  
+  form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Campos de entrada */
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 14px 30px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
 
+  .submit-container {
+    text-align: center;
+  }
+
+  .error-message {
+    color: red;
+    display: none;
+  }
+
+  input:invalid + .error-message {
+    display: block;
+  }
+
+  .error-message {
+    color: red;
+    display: none;
+  }
+
+.container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+    }
+    
+    .title {
+        color: #333;
+        font-size: 24px;
+        margin-top: 20px;
+    }
+    
+    p {
+        color: #666;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    
+    .download-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-top: 20px;
+    }
+    
+    .download-button:hover {
+        background-color: #0056b3;
+    }

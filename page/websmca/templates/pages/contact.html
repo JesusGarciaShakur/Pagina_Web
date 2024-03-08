@@ -7,21 +7,23 @@
 
 {% block content %}
 
-<h1>¡Contactanos!</h1>
+<h1>Preguntas frecuentes</h1>
 <br>
 <form action="">
-    <p>Nombre: <input type="text" name="Name" id=""></p>
+    <p>Nombre: <input type="text" name="Name" id="name" required></p>
     <br>
-    <p>Correo electrónico: <input type="email" name="Email" id=""></p>
+    <p>Correo electrónico: <input type="email" name="Email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required></p>
     <br>
-    <p>Télefono: <input type="number" name="Phone" id=""></p>
+    <p>Télefono: <input type="tel" name="Phone" id="" pattern="^\d{10}$" required></p>
     <br>
-    <p>Dirección: <input type="text" name="Address" id=""></p>
+    <p>Dirección: <input type="text" name="Address" id="" required></p>
     <br>
-    <p>Pregunta: <textarea name="Question" id="" cols="30" rows="10"></textarea></p>
+    <p>Pregunta: <textarea name="Question" id="" cols="30" rows="10" required></textarea></p>
     <br>
-    <p><input type="submit" value="Enviar pregunta"></p>
+    <div class="submit-container">
+        <input type="submit" value="Enviar pregunta">
+    </div>
 </form>
-
+<script src="{% static 'js/dataValidation.js' %}"></script>
 
 {% endblock %}
