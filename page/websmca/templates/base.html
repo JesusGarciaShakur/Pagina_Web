@@ -1,55 +1,50 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Proyecto SMCA {% block title %}{% endblock%}</title>
     {% load static%}
-
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
-
+    <link href="{% static 'css/fonts.css' %}" rel="stylesheet">
 </head>
-
 <body>
-
-    <header>
-
-        <div class="logo-header">
-            <img src="{% static 'img/logo1.png' %}" alt="">
-        </div>
-
-        <nav class="nav-menu">
-            <ul>
-                <li><a href="{% url 'index' %}">Inicio</a></li>
-                <li><a href="{% url 'product' %}">Productos</a></li>
-                <li><a href="{% url 'contact' %}">Preguntas FAQ</a></li>
-                <li><a href="{% url 'company' %}">Compañia</a></li>
-            </ul>
-        </nav>
-    </header>
-
-
-
+    <div class="header">
+        <header>
+            <div class="logo-header">
+                <img src="{% static 'img/Logo.png' %}">
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="{% url 'index' %}">Inicio</a></li>
+                    <li><a href="{% url 'product' %}">Productos</a></li>
+                    <li><a href="{% url 'contact' %}">Preguntas FAQ</a></li>
+                    <li><a href="{% url 'company' %}">Compañia</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <div class="social">
+		<ul>
+			<li><a href="http://www.whatsapp.com/" target="_blank" class="icon-whatsapp"></a></li>
+			<li><a href="http://www.github.com/" target="_blank" class="icon-github"></a></li>
+			<li><a href="http://www.facebook.com/" target="_blank" class="icon-facebook"></a></li>
+			<li><a href="http://www.telegram.com/" target="_blank" class="icon-telegram"></a></li>
+			<li><a href="http://www.instagram.com/" target="_blank" class="icon-instagram"></a></li>
+			<li><a href="http://www.twitter.com/" target="_blank" class="icon-twitter"></a></li>
+			<li><a href="mailto:contacto@falconmasters.com" class="icon-mail4"></a></li>
+		</ul>
+	</div>
     {% block content %}
     {% endblock %}
-
-
-
-
-
+    <br>
+    <br>
     <footer>
         <p>MajesTIC</p>
         <br>
         <p>Copyright© 2024</p>
         <p><a href="#">Información legal</a> | <a href="#">Política de privacidad</a></p>
     </footer>
-
     <script src="{% static 'js/script.js' %}"></script>
-
-
 </body>
-
 </html>

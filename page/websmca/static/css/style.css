@@ -11,16 +11,28 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #333;
     background-color: #f7f7f7;
-    /* azul claro */
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
 }
 
 a,
 li {
     color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+a:hover {
+    cursor: pointer;
+    color: #120991;
+}
+
+
 .logo-header img {
-    width: 50px;
+    width: 150px;
+    height: 80px;
+    align-items: center;
 }
 
 header {
@@ -39,27 +51,27 @@ header {
 }
 
 .nav-menu li {
-    margin-right: 1.5rem;
-}
-
-.imagen {
-    width: 100%;
-}
-
-.imagen img {
-    width: 100%;
+    margin-right: 1.0rem;
 }
 
 .who-are-we {
     display: flex;
+    padding-left: 60px;
+    /* Padding en el lado izquierdo */
+    padding-right: 30px;
 }
 
 .mision-vision {
     display: flex;
+    padding-left: 60px;
+    /* Padding en el lado izquierdo */
+    padding-right: 30px;
 }
 
 .product-section {
     display: flex;
+    padding-left: 60px; /* Padding en el lado izquierdo */
+    padding-right: 20px;
 }
 
 .left-block {
@@ -73,16 +85,16 @@ header {
 
 /*##################FOOTER####################*/
 
+html {
+    height: 100%;
+}
+
 footer {
-    background-color: #33333367;
-    color: #1b1818;
+    background-color: #9abde6b4;
+    color: #060606;
+    border-radius: 10px;
     text-align: center;
-    position: fixed;
-    /* Fija el footer */
-    width: 100%;
-    /* Ocupa todo el ancho */
-    bottom: 0;
-    height: 80PX;
+    margin-top: auto;
 }
 
 
@@ -93,15 +105,19 @@ footer p {
 
 footer a {
     color: #000000;
-    text-decoration: none;
 }
 
 
 footer a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 /*#################Descargar####################*/
+
+.download1 {
+    text-decoration: underline;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 
 .download {
     display: inline-block;
@@ -123,32 +139,50 @@ footer a:hover {
 .faq-section {
     max-width: 600px;
     margin: 0 auto;
-    padding: 20px;
+    padding-left: 60px;
+    /* Padding en el lado izquierdo */
+    padding-right: 30px;
+    padding-left: 60px;
+    /* Padding en el lado izquierdo */
+    padding-right: 30px;
 }
 
 /* Estilo de cada pregunta frecuente */
 .faq-item {
     margin-bottom: 20px;
+    padding-left: 60px;
+    /* Padding en el lado izquierdo */
+    padding-right: 30px;
 }
 
 .faq-item h3 {
     margin-top: 0;
     color: #333;
+    padding-left: 60px;
+    /* Padding en el lado izquierdo */
+    padding-right: 30px;
 }
 
 .faq-item p {
     margin-bottom: 0;
     color: #666;
+    padding-left: 60px;
+    /* Padding en el lado izquierdo */
+    padding-right: 30px;
 }
+
 /*##################FORMULARIO FAQ####################*/
-  h1 {
+h1 {
     text-align: center;
     color: #007bff;
     font-size: 36px;
     margin-bottom: 30px;
-  }
-  
-  form {
+    padding-left: 60px;
+    /* Padding en el lado izquierdo */
+    padding-right: 30px;
+}
+
+form {
     max-width: 600px;
     margin: 0 auto;
     padding: 30px;
@@ -156,13 +190,13 @@ footer a:hover {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Campos de entrada */
-  input[type="text"],
-  input[type="email"],
-  input[type="tel"],
-  textarea {
+}
+
+/* Campos de entrada */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
     width: 100%;
     padding: 12px;
     margin-bottom: 20px;
@@ -170,13 +204,13 @@ footer a:hover {
     border-radius: 4px;
     box-sizing: border-box;
     font-size: 16px;
-  }
-  
-  textarea {
+}
+
+textarea {
     resize: vertical;
-  }
-  
-  input[type="submit"] {
+}
+
+input[type="submit"] {
     background-color: #007bff;
     color: white;
     border: none;
@@ -185,59 +219,137 @@ footer a:hover {
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s ease;
-  }
-  
-  input[type="submit"]:hover {
+}
+
+input[type="submit"]:hover {
     background-color: #0056b3;
-  }
+}
 
-  .submit-container {
+.submit-container {
     text-align: center;
-  }
+}
 
-  .error-message {
+
+.error-message {
     color: red;
     display: none;
-  }
+}
 
-  input:invalid + .error-message {
+input:invalid+.error-message {
     display: block;
-  }
+}
 
-  .error-message {
+.error-message {
     color: red;
     display: none;
-  }
+}
 
 .container {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 20px;
-        font-family: Arial, sans-serif;
-    }
-    
-    .title {
-        color: #333;
-        font-size: 24px;
-        margin-top: 20px;
-    }
-    
-    p {
-        color: #666;
-        font-size: 16px;
-        line-height: 1.5;
-    }
-    
-    .download-button {
-        display: inline-block;
-        padding: 10px 20px;
-        background-color: #007bff;
-        color: #fff;
-        text-decoration: none;
-        border-radius: 5px;
-        margin-top: 20px;
-    }
-    
-    .download-button:hover {
-        background-color: #0056b3;
-    }
+    max-width: 800px;
+    margin: 0 auto;
+    padding-left: 60px;
+    /* Padding en el lado izquierdo */
+    padding-right: 30px;
+    font-family: Arial, sans-serif;
+}
+
+.title {
+    color: #333;
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+p {
+    color: #0a0a0a;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.download-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.download-button:hover {
+    background-color: #0056b3;
+}
+
+/*##################BARRA CONTACTANOS####################*/
+
+/* Redondear solo los bordes de inicio y final */
+.social ul li:first-child a {
+    border-top-right-radius: 10px;
+}
+
+.social ul li:last-child a {
+    border-bottom-right-radius: 10px;
+}
+
+.social {
+    position: fixed;
+    /* Hacemos que la posición en pantalla sea fija para que siempre se muestre en pantalla*/
+    left: 0;
+    /* Establecemos la barra en la izquierda */
+    top: 150px;
+    /* Bajamos la barra 200px de arriba a abajo */
+    z-index: 2000;
+    /* Utilizamos la propiedad z-index para que no se superponga algún otro elemento como sliders, galerías, etc */
+}
+
+.social ul {
+    list-style: none;
+}
+
+.social ul li a {
+    display: inline-block;
+    color: #fff;
+    background: #000;
+    padding: 10px 15px;
+    text-decoration: none;
+    -webkit-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+    /* Establecemos una transición a todas las propiedades */
+}
+
+.social ul li .icon-whatsapp {
+    background: #0eac39;
+}
+
+.social ul li .icon-github {
+    background: #2d2d2d;
+}
+
+.social ul li .icon-facebook {
+    background: #3b5998;
+}
+
+/* Establecemos los colores de cada red social, aprovechando su class */
+.social ul li .icon-telegram {
+    background: #25a7ae;
+}
+
+/* Establecemos los colores de cada red social, aprovechando su class */
+.social ul li .icon-instagram {
+    background: #d11e86;
+}
+
+.social ul li .icon-twitter {
+    background: #00abf0;
+}
+
+.social ul li .icon-mail4 {
+    background: #d81616;
+}
+
+.social ul li a:hover {
+    background: #000;
+    /* Cambiamos el fondo cuando el usuario pase el mouse */
+    padding: 10px 30px;
+    /* Hacemos mas grande el espacio cuando el usuario pase el mouse */
+}
