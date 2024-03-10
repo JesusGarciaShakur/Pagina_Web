@@ -7,4 +7,10 @@ urlpatterns = [
     path('company/',views.company,name='company'),
     path('contact/',views.contact,name='contact'),
     path('product/',views.product,name='product'),
+    
+    path('legal/',views.legal,name='legal'),
+    path('privacidad/',views.privacidad,name='privacidad'),
+
+    
+
 ]

@@ -60,9 +60,10 @@ header {
     display: flex;
 
 }
-
+/*  ajusten el padding!!!   */ 
 .right-block {
     width: 50%;
+    padding:1%;
 }
 
 /*##################FOOTER####################*/
@@ -117,11 +118,23 @@ footer a:hover {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
+    
 }
 
 /* Estilo de cada pregunta frecuente */
-.faq-item {
-    margin-bottom: 20px;
+.faq-item  {
+    border-radius: 2px;
+padding: 10px;
+    margin-bottom: 50px;
+    border: 2px solid rgb(162, 158, 158);
+}
+
+.btnquestion{
+    
+width: 100%;
+background-color: rgba(255, 255, 255, 0);
+border: 0;
+font-size: 18px;
 }
 
 .faq-item h3 {
@@ -134,3 +147,7 @@ footer a:hover {
     color: #666;
 }
 
+#FAQ{
+border: 1px solid black;
+
+}
