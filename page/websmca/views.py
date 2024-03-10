@@ -14,3 +14,13 @@ def contact(request):
 
 def product(request):
     return render(request, 'pages/product.html')
+
+
+
+
+#redirect a info legal
+def legal(request):
+    return render(request, 'legal/legal_information.html')
+
+def privacidad(request):
+    return render(request, 'legal/Privacy_Policy.html')
