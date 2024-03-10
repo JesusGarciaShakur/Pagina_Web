@@ -71,7 +71,7 @@ footer {
     background-color: #333;
     color: #fff;
     text-align: center;
-    position: static;
+    position: fixed;
     /* Fija el footer */
     width: 100%;
     /* Ocupa todo el ancho */
