@@ -16,10 +16,16 @@
             </div>
             <nav class="nav-menu">
                 <ul>
-                    <li><a href="{% url 'index' %}">Inicio</a></li>
-                    <li><a href="{% url 'product' %}">Productos</a></li>
-                    <li><a href="{% url 'contact' %}">Preguntas FAQ</a></li>
-                    <li><a href="{% url 'company' %}">Compañia</a></li>
+                    <li>
+                        <a href="{% url 'index' %}" >
+                        <button class="btn" >Inicio </button>
+                </a>
+
+
+                    </a></li>
+                    <li><a href="{% url 'product' %}"> <button class="btn">Productos </button></a></li>
+                    <li><a href="{% url 'contact' %}"> <button class="btn">Preguntas FAQ</button></a></li>
+                    <li><a href="{% url 'company' %}"> <button class="btn">Compañia</button></a></li>
                 </ul>
             </nav>
         </header>
@@ -43,8 +49,10 @@
         <p>MajesTIC</p>
         <br>
         <p>Copyright© 2024</p>
-        <p><a href="{% url 'legal' %}">Información legal</a> | <a href="{% url 'privacidad' %}">Política de privacidad</a></p>
+        <p><a href="{% url 'legal' %}"><button class="btn">Información legal</button></a> | 
+            <a href="{% url 'privacidad' %}"><button class="btn">Política de privacidad</button></a></p>
     </footer>
+    <script src="{% static 'js/ondaBoton.js' %}"></script>
     <script src="{% static 'js/script.js' %}"></script>
 </body>
 </html>

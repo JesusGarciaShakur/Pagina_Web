@@ -13,21 +13,33 @@
     <h2>Preguntas Frecuentes</h2>
 
     <div class="faq-item">
-        <h3>¿Cómo puedo registrarme en la aplicación?</h3>
-        <p>Para registrarte en la aplicación, simplemente ve a la página de registro y completa el formulario con tus
-            datos.</p>
+        <details>
+            <summary>
+                <h3>¿Cómo puedo registrarme en la aplicación?</h3>
+            </summary>
+            <p id="answer"> Para registrarte en la aplicación, simplemente ve a la página de registro y completa el formulario con tus
+                datos.</p>
+            </details>
     </div>
 
     <div class="faq-item">
-        <h3>¿Qué métodos de pago aceptan?</h3>
-        <p>Aceptamos tarjetas de crédito, transferencias bancarias y PayPal como métodos de pago.</p>
+        <details>
+            <summary>
+                <h3>¿Qué métodos de pago aceptan?</h3>
+            </summary>
+                <p id="answer">Aceptamos tarjetas de crédito, transferencias bancarias y PayPal como métodos de pago.</p>
+        </details>
     </div>
 
     <div class="faq-item">
-        <h3>¿Cómo puedo contactar al servicio de soporte?</h3>
-        <p>Puedes contactar a nuestro servicio de soporte enviando un correo electrónico a support@example.com o
-            llamando al número +123456789.</p>
-    </div>
+        <details>
+            <summary>
+              <h3>¿Cómo puedo contactar al servicio de soporte?</h3>
+            </summary>
+            <p id="answer">Puedes contactar a nuestro servicio de soporte enviando un correo electrónico a support@example.com o
+                llamando al número +123456789.</p>
+            </div>
+        </details>
 </div>
 
 <h3>Tienes alguna otra pregunta</h3>
@@ -48,5 +60,6 @@
     </div>
 </form>
 <script src="{% static 'js/dataValidation.js' %}"></script>
+<script src="{% static 'js/detail.js' %}"></script>
 
 {% endblock %}
