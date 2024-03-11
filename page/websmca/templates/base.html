@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
     <link href="{% static 'css/fonts.css' %}" rel="stylesheet">
 </head>
+
 <body>
     <div class="header">
         <header>
@@ -17,12 +19,11 @@
             <nav class="nav-menu">
                 <ul>
                     <li>
-                        <a href="{% url 'index' %}" >
-                        <button class="btn" >Inicio </button>
-                </a>
-
-
-                    </a></li>
+                        <a href="{% url 'index' %}">
+                            <button class="btn">Inicio </button>
+                        </a>
+                        </a>
+                    </li>
                     <li><a href="{% url 'product' %}"> <button class="btn">Productos </button></a></li>
                     <li><a href="{% url 'contact' %}"> <button class="btn">Preguntas FAQ</button></a></li>
                     <li><a href="{% url 'company' %}"> <button class="btn">Compañia</button></a></li>
@@ -31,16 +32,16 @@
         </header>
     </div>
     <div class="social">
-		<ul>
-			<li><a href="http://www.whatsapp.com/" target="_blank" class="icon-whatsapp"></a></li>
-			<li><a href="http://www.github.com/" target="_blank" class="icon-github"></a></li>
-			<li><a href="http://www.facebook.com/" target="_blank" class="icon-facebook"></a></li>
-			<li><a href="http://www.telegram.com/" target="_blank" class="icon-telegram"></a></li>
-			<li><a href="http://www.instagram.com/" target="_blank" class="icon-instagram"></a></li>
-			<li><a href="http://www.twitter.com/" target="_blank" class="icon-twitter"></a></li>
-			<li><a href="mailto:contacto@falconmasters.com" class="icon-mail4"></a></li>
-		</ul>
-	</div>
+        <ul>
+            <li><a href="http://www.whatsapp.com/" target="_blank" class="icon-whatsapp"></a></li>
+            <li><a href="http://www.github.com/" target="_blank" class="icon-github"></a></li>
+            <li><a href="http://www.facebook.com/" target="_blank" class="icon-facebook"></a></li>
+            <li><a href="http://www.telegram.com/" target="_blank" class="icon-telegram"></a></li>
+            <li><a href="http://www.instagram.com/" target="_blank" class="icon-instagram"></a></li>
+            <li><a href="http://www.twitter.com/" target="_blank" class="icon-twitter"></a></li>
+            <li><a href="mailto:contacto@falconmasters.com" class="icon-mail4"></a></li>
+        </ul>
+    </div>
     {% block content %}
     {% endblock %}
     <br>
@@ -49,10 +50,12 @@
         <p>MajesTIC</p>
         <br>
         <p>Copyright© 2024</p>
-        <p><a href="{% url 'legal' %}"><button class="btn">Información legal</button></a> | 
-            <a href="{% url 'privacidad' %}"><button class="btn">Política de privacidad</button></a></p>
+        <p><a href="{% url 'legal' %}"><button class="btn">Información legal</button></a> |
+            <a href="{% url 'privacidad' %}"><button class="btn">Política de privacidad</button></a>
+        </p>
     </footer>
     <script src="{% static 'js/ondaBoton.js' %}"></script>
     <script src="{% static 'js/script.js' %}"></script>
 </body>
+
 </html>
