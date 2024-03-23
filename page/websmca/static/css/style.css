@@ -1,177 +1,135 @@
 * {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    padding: 0;
-    margin: 0;
     list-style: none;
 }
 
+p {
+    text-align: justify;
+}
+
 body {
-    background-color: #e0f3ff;
-    margin-bottom: 100px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #333;
-    background-color: #f7f7f7;
-    display: flex;
-    flex-direction: column;
+    position: relative;
+    background-color: lavender;
+    margin: 0;
+    padding-bottom: 6rem;
     min-height: 100%;
 }
 
-a,
-li {
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+.content {
+    z-index: 2;
 }
 
-a:hover {
-    cursor: pointer;
-    color: #120991;
+.logo {
+    height: 100px;
+    width: 120px;
 }
 
-
-.logo-header img {
-    width: 150px;
-    height: 80px;
-    align-items: center;
+.header {
+    position: relative;
+    z-index: 2;
+    background-color: #343a40;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background: linear-gradient(transparent);
 }
 
-header {
-    background-color: #9abde6b4;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: .5rem 1rem;
-    border-radius: 10px;
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: #343a40;
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
-.nav-menu ul {
-    display: flex;
-    align-items: center;
+.content {
+    background: linear-gradient(transparent, white);
+    position: relative;
+    z-index: 1;
+    margin-bottom: 20px; 
 }
 
-.nav-menu li {
-    margin-right: 1.0rem;
+.content img {
+    max-width: 100%;
+    margin-right: 20px;
 }
 
-.who-are-we {
-    display: flex;
-    padding-left: 60px;
-    /* Padding en el lado izquierdo */
-    padding-right: 30px;
-}
-
-.mision-vision {
-    display: flex;
-    padding-left: 60px;
-    /* Padding en el lado izquierdo */
-    padding-right: 30px;
-}
-
-.product-section {
-    display: flex;
-    padding-left: 60px;
-    /* Padding en el lado izquierdo */
-    padding-right: 20px;
-}
-
-.left-block {
-    display: flex;
-
-}
-
-.right-block {
-    width: 50%;
-}
-
-/*##################FOOTER####################*/
-
-html {
-    height: 100%;
-}
-
-footer {
-    background-color: #9abde6b4;
-    color: #060606;
-    border-radius: 10px;
+.form-group.text-center {
     text-align: center;
-    margin-top: auto;
 }
 
-
-footer p {
-    margin: 1px 0;
+.accordion .card-header {
+    background-color: #f8f9fa;
+    border: none;
+    padding: 1rem;
 }
 
-
-footer a {
-    color: #000000;
+.accordion .card-header h2 button {
+    font-weight: bold;
 }
 
-
-footer a:hover {
-    text-decoration: none;
-}
-
-/*#################Descargar####################*/
-
-.download1 {
+.accordion .card-header button:hover {
     text-decoration: underline;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.download {
-    display: inline-block;
-    padding: 10px 20px;
+.btn-primary {
     background-color: #007bff;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    text-align: center;
-    transition: background-color 0.3s ease;
+    border: none;
 }
 
-.download:hover {
+.btn-primary:hover {
     background-color: #0056b3;
 }
 
-/*##################FAQ####################*/
-/* Estilo de la sección de FAQ */
-
-.faq-section {
-    max-width: 600px;
-    margin: 0 auto;
-    padding-left: 60px;
-    /* Padding en el lado izquierdo */
-    padding-right: 30px;
-    padding-left: 60px;
-    /* Padding en el lado izquierdo */
-    padding-right: 30px;
+.footer.hidden {
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
 }
 
-/* Estilo de cada pregunta frecuente */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    width: 50px;
+    height: 50px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#back-to-top:hover {
+    background-color: #0056b3;
+}
+
 .faq-item {
     margin-bottom: 20px;
     margin-left: 40px;
     width: 85%;
-    /* Padding en el lado izquierdo */
     padding-right: 30px;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 details {
     justify-content: center;
     height: 50px;
-    border: 2px solid rgb(233, 231, 231);
-    border-radius: 5px;
+    border: 3px solid rgb(233, 231, 231);
+    border-radius: 10px;
     background-color: #ffffff;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-
 }
 
 .faq-item h3 {
     margin-top: 0;
     color: #333;
     padding-left: 60px;
-    /* Padding en el lado izquierdo */
     padding-right: 30px;
 }
 
@@ -179,238 +137,90 @@ details {
     margin-bottom: 0;
     color: #666;
     padding-left: 60px;
-    /* Padding en el lado izquierdo */
     padding-right: 30px;
 }
 
-/* efecto onda calquier boton*/
-
-
-.btn {
-    position: relative;
-    margin: 15px;
-    background-color: #9abee600;
-    outline: none;
-    font-size: 19px;
-    padding: 10px;
-    border: none;
-
-    border-radius: 6px;
-    overflow: hidden;
+#miFormulario {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.btn:hover {
-    background-color: #a5cbf7b4;
-    border-bottom: 6px solid rgba(255, 255, 255, 0);
-}
-
-.btn span {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    background: rgba(255, 255, 255, .15);
-    border-radius: 40%;
-    pointer-events: none;
-    animation: ripple .3s linear;
-}
-
-@keyframes ripple {
-    0% {
-        width: 0;
-        height: 0;
-    }
-
-    80% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-        width: 100px;
-        height: 100px;
-    }
-}
-
-/* fin de efecto onda */
-
-/*##################FORMULARIO FAQ####################*/
-h1 {
-    text-align: center;
-    color: #007bff;
-    font-size: 36px;
-    margin-bottom: 30px;
-    padding-left: 60px;
-    /* Padding en el lado izquierdo */
-    padding-right: 30px;
-}
-
-form {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 30px;
-    border: 1px solid #ddd;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-}
-
-/* Campos de entrada */
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    font-size: 16px;
-}
-
-textarea {
-    resize: vertical;
-}
-
-input[type="submit"] {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 14px 30px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-}
-
-input[type="submit"]:hover {
-    background-color: #0056b3;
-}
-
-.submit-container {
-    text-align: center;
-}
-
-
-.error-message {
-    color: red;
-    display: none;
-}
-
-input:invalid+.error-message {
-    display: block;
-}
-
-.error-message {
-    color: red;
-    display: none;
-}
-
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding-left: 60px;
-    /* Padding en el lado izquierdo */
-    padding-right: 30px;
-    font-family: Arial, sans-serif;
-}
-
-.title {
+#miFormulario .form-group label {
     color: #333;
-    font-size: 24px;
-    margin-top: 20px;
 }
 
-p {
-    color: #0a0a0a;
-    font-size: 16px;
-    line-height: 1.5;
+#miFormulario .form-control {
+    border-color: #007bff;
 }
 
-.download-button {
-    display: inline-block;
-    padding: 10px 20px;
+#miFormulario .form-control:focus {
+    border-color: #0056b3;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.6);
+}
+
+#miFormulario .btn-primary {
     background-color: #007bff;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 20px;
+    border-color: #007bff;
+    font-weight: bold;
 }
 
-.download-button:hover {
+#miFormulario .btn-primary:hover {
     background-color: #0056b3;
+    border-color: #0056b3;
 }
 
-/*##################BARRA CONTACTANOS####################*/
-
-/* Redondear solo los bordes de inicio y final */
-.social ul li:first-child a {
-    border-top-right-radius: 10px;
+#miFormulario {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.social ul li:last-child a {
-    border-bottom-right-radius: 10px;
+#miFormulario .form-group label {
+    color: #333;
 }
 
-.social {
-    position: fixed;
-    /* Hacemos que la posición en pantalla sea fija para que siempre se muestre en pantalla*/
-    left: 0;
-    /* Establecemos la barra en la izquierda */
-    top: 150px;
-    /* Bajamos la barra 200px de arriba a abajo */
-    z-index: 2000;
-    /* Utilizamos la propiedad z-index para que no se superponga algún otro elemento como sliders, galerías, etc */
+#miFormulario .form-control {
+    border-color: #007bff;
 }
 
-.social ul {
-    list-style: none;
+#miFormulario .form-control:focus {
+    border-color: #0056b3;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.6);
 }
 
-.social ul li a {
-    display: inline-block;
-    color: #fff;
-    background: #000;
-    padding: 10px 15px;
-    text-decoration: none;
-    -webkit-transition: all 500ms ease;
-    -o-transition: all 500ms ease;
-    transition: all 500ms ease;
-    /* Establecemos una transición a todas las propiedades */
+#miFormulario .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    font-weight: bold;
 }
 
-.social ul li .icon-whatsapp {
-    background: #0eac39;
+#miFormulario .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
 }
 
-.social ul li .icon-github {
-    background: #2d2d2d;
-}
+@media (max-width: 768px) {
+    .footer {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
 
-.social ul li .icon-facebook {
-    background: #3b5998;
-}
+    .content {
+        text-align: left; /* Alineación izquierda del contenido en dispositivos pequeños */
+    }
 
-/* Establecemos los colores de cada red social, aprovechando su class */
-.social ul li .icon-telegram {
-    background: #25a7ae;
-}
-
-/* Establecemos los colores de cada red social, aprovechando su class */
-.social ul li .icon-instagram {
-    background: #d11e86;
-}
-
-.social ul li .icon-twitter {
-    background: #00abf0;
-}
-
-.social ul li .icon-mail4 {
-    background: #d81616;
-}
-
-.social ul li a:hover {
-    background: #000;
-    /* Cambiamos el fondo cuando el usuario pase el mouse */
-    padding: 10px 30px;
-    /* Hacemos mas grande el espacio cuando el usuario pase el mouse */
+    .faq-item {
+        margin-left: 5%; /* Reducir el margen izquierdo en dispositivos pequeños */
+        margin-right: 5%;
+        max-width: 90%; /* Ajustar el ancho máximo en dispositivos pequeños */
+        overflow: hidden;
+        transition: height 0.3s ease; /* Agregar una transición suave */
+    }
+    
+    .faq-item.expanded {
+        height: auto; /* Establecer la altura a auto para expandir el contenido */
+    }
 }

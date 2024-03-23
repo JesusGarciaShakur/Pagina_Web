@@ -1,52 +1,49 @@
 {% extends 'base.html' %}
 
-
-{% block title %} producto {% endblock title %}
+{% block title %} Producto {% endblock title %}
 
 {% load static %}
-
 
 {% block content %}
 
 <section class="product-section">
-  <div>
-    <article class="left-block">
-      <div>
-        <h2>¿Cómo funciona la aplicación móvil</h2>
-        <p>
-          Nuestra aplicación móvil es increíblemente fácil de usar; 
-          su interfaz intuitiva te sorprenderá. Registrarse dentro de la aplicación 
-          es todo lo que necesitas para comenzar. Una vez registrado, solo tienes que iniciar sesión y, 
-          ¡listo! Nuestro Sistema de Monitoreo para Contenedores de Agua (SMCA) se detectará automáticamente, 
-          permitiéndote disfrutar de todas sus funcionalidades sin ningún problema.
-          Desde nuestra aplicacion puedes configurar tiempo para encender y apagar su bomba de sumnistro de Agua
-          asi mismo contamos con una opcion para hacer un suministro de agua eficiente y evitar el desabasto.
-        </p>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <article class="left-block">
+          <div>
+            <h2>¿Cómo funciona la aplicación móvil?</h2>
+            <p>
+              Nuestra aplicación móvil es increíblemente fácil de usar; su interfaz intuitiva te sorprenderá. Registrarse dentro de la aplicación es todo lo que necesitas para comenzar. Una vez registrado, solo tienes que iniciar sesión y, ¡listo! Nuestro Sistema de Monitoreo para Contenedores de Agua (SMCA) se detectará automáticamente, permitiéndote disfrutar de todas sus funcionalidades sin ningún problema.
+              Desde nuestra aplicación puedes configurar el tiempo para encender y apagar su bomba de suministro de agua. También contamos con una opción para hacer un suministro de agua eficiente y evitar el desabasto.
+            </p>
+          </div>
+          <div>
+            <img src="{% static 'img/phone1.png' %}" alt="Imagen de la aplicación móvil" width="146" height="174">
+          </div>
+        </article>
       </div>
-      <div>
-        <img src="{% static 'img/phone1.png' %}" alt="" width="146" height="174">
+      <div class="col-md-6">
+        <article class="left-block">
+          <div>
+            <img src="{% static 'img/bomba.png' %}" alt="Imagen del producto" width="146" height="174">
+          </div>
+          <div>
+            <h2>¿Cómo funciona el producto?</h2>
+            <p>
+              El SMCA es un sistema que utiliza un sensor que emite una onda ultrasónica, la cual es recuperada de la misma manera. Capturamos los datos obtenidos durante este proceso y los mostramos en la <a class="download1" href="#">Aplicación Móvil</a> para que el usuario los interprete fácilmente.
+            </p>
+          </div>
+        </article>
       </div>
-    </article>
-    <article class="left-block">
-      <div>
-        <img src="{% static 'img/bomba.png' %}" alt="" width="146" height="174">
-      </div>
-      <div>
-        <h2>¿Cómo funciona el producto?</h2>
-        <p>
-          El SMCA es un sistema que utiliza un sensor el cual emite una onda ultrasonica 
-          la cual es recuperada de la misma manera se capturan los datos obtenidos durante 
-          este proceso y los mostramos en la <a class="download1" href="#">Aplicación Movil</a> y se los mostramos
-          al usuario para su facil interpretacion.
-        </p>
-      </div>
-    </article>
+    </div>
   </div>
 
-
-  <aside class="right-block"> 
-    <h2>Descargar la aplicación aquí</h2>
-    <a href="#" class="download">Descargar Aplicación</a>
+  <aside class="right-block">
+    <div class="container">
+      <h2>Descargar la aplicación aquí</h2>
+      <a href="#" class="btn btn-primary btn-lg download-btn">Descargar Aplicación</a>
+    </div>
   </aside>
 </section>
 

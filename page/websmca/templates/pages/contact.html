@@ -1,103 +1,175 @@
 {% extends 'base.html' %}
-
-
-{% block title %} contact {% endblock title %}
-
+{% block title %} Contacto {% endblock title %}
 {% load static %}
-
 {% block content %}
 
-<h1>Preguntas frecuentes</h1>
-<br>
-<div class="faq-section">
-    <h2>Preguntas Frecuentes</h2>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+        .faq-item h3 {
+            margin-top: 0;
+            color: #333;
+        }
 
-    <div class="faq-item">
-        <details>
-            <summary>
-                <h3>¿Cómo puedo registrarme en la aplicación?</h3>
-            </summary>
-            <p id="answer"> Para registrarte en la aplicación, simplemente ve a la página de registro y completa el formulario con tus
-                datos.</p>
-            </details>
+        .faq-item p {
+            margin-bottom: 0;
+            color: #666;
+            max-width: 100%;
+            word-wrap: break-word;
+        }
+
+        @media (max-width: 768px) {
+            .faq-item {
+                margin-left: 0;
+                width: 100%;
+            }
+        }
+
+        /* Estilos adicionales para hacer el contenedor más pequeño */
+        .container1 {
+            max-width: 700px;
+            /* Define el ancho máximo deseado */
+            margin: 0 auto;
+            /* Centra el contenedor horizontalmente */
+        }
+    </style>
+</head>
+
+<div class="container">
+    <h1 class="text-center mt-5">Contactanos</h1>
+
+    {# Mostrar mensajes de éxito #}
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert-message alert-success">
+        {{ message }}
     </div>
+    {% endfor %}
+    {% endif %}
 
-    <div class="faq-item">
-        <details>
-            <summary>
-                <h3>¿Qué métodos de pago aceptan?</h3>
-            </summary>
-                <p id="answer">Aceptamos tarjetas de crédito, transferencias bancarias y PayPal como métodos de pago.</p>
-        </details>
+    {# Mostrar mensajes de error #}
+    {% if form.errors %}
+    {% for field, error_list in form.errors.items %}
+    {% for error in error_list %}
+    <div class="alert-message alert-error">
+        {{ error }}
     </div>
+    {% endfor %}
+    {% endfor %}
+    {% endif %}
 
-    <div class="faq-item">
-        <details>
-            <summary>
-              <h3>¿Cómo puedo contactar al servicio de soporte?</h3>
-            </summary>
-            <p id="answer">Puedes contactar a nuestro servicio de soporte enviando un correo electrónico a support@example.com o
-                llamando al número +123456789.</p>
+    <div class="faq-section mt-5">
+        <div class="faq-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 offset-md-3"> <!-- Centra el título en dispositivos pequeños -->
+                        <h2 class="text-center">Preguntas Frecuentes</h2>
+                    </div>
+                </div>
             </div>
-        </details>
+            <div class="faq-item">
+                <details>
+                    <summary>
+                        <h3>¿Cómo puedo registrarme en la aplicación?</h3>
+                    </summary>
+                    <p id="answer"> Para registrarte en la aplicación, simplemente ve a la página de registro y completa
+                        el formulario con tus
+                        datos.</p>
+                </details>
+            </div>
 
-          <div class="faq-item">
-            <details>
-            <summary>
-              <h3>¿Sirve para mi telefono?</h3>
-            </summary>
-            <p id="answer">Sí, la aplicacion esa diseñada para que se pueda correr en los dispositivos mas modernos y no tan recientes .</p>
+            <div class="faq-item">
+                <details>
+                    <summary>
+                        <h3>¿Qué métodos de pago aceptan?</h3>
+                    </summary>
+                    <p id="answer">Aceptamos tarjetas de crédito, transferencias bancarias y PayPal como métodos de
+                        pago.</p>
+                </details>
             </div>
-        </details>
 
-    <div class="faq-item">
-        <details>
-            <summary>
-              <h3>¿Me jala cuando quiera?</h3>
-            </summary>
-            <p id="answer">
-                La aplicacion sigue registrando los datos aun que no tengas conexion a Wi-Fi, solo cuando te conectes a ella podras consultarlos de nuevo 
-            </p>
-        </details>
+            <div class="faq-item">
+                <details>
+                    <summary>
+                        <h3>¿Cómo puedo contactar al servicio de soporte?</h3>
+                    </summary>
+                    <p id="answer">Puedes contactar a nuestro servicio de soporte enviando un correo electrónico a
+                        support@example.com o
+                        llamando al número +123456789.</p>
+                </details>
             </div>
-<div class="faq-item">
-    <details>
-        <summary>
-            <h3>¿Cuanto tiempo me va a servir ?</h3>
-            </summary>
-            <p id="answer">
-                El tiempo de vida util del prototico SMCA es alrededor de 2 a 4 años de duracion constante
-            </p>
+
+            <div class="faq-item">
+                <details>
+                    <summary>
+                        <h3>¿Sirve para mi teléfono?</h3>
+                    </summary>
+                    <p id="answer">Sí, la aplicación está diseñada para que se pueda utilizar en dispositivos modernos
+                        y no tan recientes.</p>
+                </details>
             </div>
-        </details>
+
+            <div class="faq-item">
+                <details>
+                    <summary>
+                        <h3>¿Me funciona en cualquier momento?</h3>
+                    </summary>
+                    <p id="answer">
+                        La aplicación sigue registrando los datos incluso si no tienes conexión a Wi-Fi. Solo podrás
+                        consultarlos cuando te conectes.
+                    </p>
+                </details>
+            </div>
+
+            <div class="faq-item">
+                <details>
+                    <summary>
+                        <h3>¿Cuánto tiempo me va a servir?</h3>
+                    </summary>
+                    <p id="answer">
+                        El tiempo de vida útil del prototipo SMCA es aproximadamente de 2 a 4 años de duración
+                        constante.
+                    </p>
+                </details>
+            </div>
+        </div>
     </div>
-    
-    
 </div>
-<div class="faq-section" id="large">
 
-    <h3 >¿Tienes alguna otra pregunta?</h3>
-    <p>Dejanosla saber complerando el formulario a continuacion y nosotors nos pondremos en contacto contigo lo mas pronto posible</p>
+<div class="container1">
+    <form action="{% url 'contact' %}" id="miFormulario" method="post" class="mt-5">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="Name">Nombre:</label>
+            <input type="text" class="form-control" id="Name" name="Name" required>
+        </div>
+        <div class="form-group">
+            <label for="Email">Correo electrónico:</label>
+            <input type="email" class="form-control" id="Email" name="Email"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+        </div>
+        <div class="form-group">
+            <label for="Phone">Teléfono:</label>
+            <input type="tel" class="form-control" id="Phone" name="Phone" pattern="^\d{10}$" required>
+        </div>
+        <div class="form-group">
+            <label for="Address">Dirección:</label>
+            <input type="text" class="form-control" id="Address" name="Address" required>
+        </div>
+        <div class="form-group">
+            <label for="Question">Pregunta:</label>
+            <textarea class="form-control" id="Question" name="Question" rows="4" required></textarea>
+        </div>
+        <div class="form-group d-flex justify-content-center">
+            <button type="submit" class="btn btn-primary">Enviar pregunta</button>
+        </div>
+    </form>
 </div>
 
-</div>
-
-<form action="">
-    <p>Nombre: <input type="text" name="Name" id="name" required></p>
-    <br>
-    <p>Correo electrónico: <input type="email" name="Email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required></p>
-    <br>
-    <p>Télefono: <input type="tel" name="Phone" id="" pattern="^\d{10}$" required></p>
-    <br>
-    <p>Dirección: <input type="text" name="Address" id="" required></p>
-    <br>
-    <p>Pregunta: <textarea name="Question" id="" cols="30" rows="10" required></textarea></p>
-    <br>
-    <div class="submit-container">
-        <input type="submit" value="Enviar pregunta">
-    </div>
-</form>
 <script src="{% static 'js/dataValidation.js' %}"></script>
 <script src="{% static 'js/detail.js' %}"></script>
-
 {% endblock %}
