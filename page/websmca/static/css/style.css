@@ -30,6 +30,7 @@ body {
     padding-top: 5px;
     padding-bottom: 5px;
     background: linear-gradient(transparent);
+    border-radius: 0 0 10px 10px;
 }
 
 .footer {
@@ -41,13 +42,17 @@ body {
     color: white;
     padding-top: 20px;
     padding-bottom: 20px;
+    border-radius: 5px 5px 0 0;
+    display: flex; /* Establecer como contenedor flex */
+    justify-content: center; /* Centrar el contenido horizontalmente */
+    align-items: center; /* Centrar el contenido verticalmente */
 }
 
 .content {
     background: linear-gradient(transparent, white);
     position: relative;
     z-index: 1;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
 }
 
 .content img {
@@ -209,18 +214,39 @@ details {
     }
 
     .content {
-        text-align: left; /* Alineación izquierda del contenido en dispositivos pequeños */
+        text-align: left;
+        /* Alineación izquierda del contenido en dispositivos pequeños */
     }
 
     .faq-item {
-        margin-left: 5%; /* Reducir el margen izquierdo en dispositivos pequeños */
+        margin-left: 5%;
+        /* Reducir el margen izquierdo en dispositivos pequeños */
         margin-right: 5%;
-        max-width: 90%; /* Ajustar el ancho máximo en dispositivos pequeños */
+        max-width: 90%;
+        /* Ajustar el ancho máximo en dispositivos pequeños */
         overflow: hidden;
-        transition: height 0.3s ease; /* Agregar una transición suave */
+        transition: height 0.3s ease;
+        /* Agregar una transición suave */
     }
-    
+
     .faq-item.expanded {
-        height: auto; /* Establecer la altura a auto para expandir el contenido */
+        height: auto;
+        /* Establecer la altura a auto para expandir el contenido */
     }
+}
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content {
+    flex: 1;
+}
+
+.right-block {
+    flex: 1;
+    text-align: right;
 }

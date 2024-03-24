@@ -36,11 +36,15 @@
             margin: 0 auto;
             /* Centra el contenedor horizontalmente */
         }
+        .text-center{
+            text-align: center;
+            align-items: normal;
+            white-space: nowrap;
+        }
     </style>
 </head>
 
-<div class="container">
-    <h1 class="text-center mt-5">Contactanos</h1>
+<div class="row justify-content-center">
 
     {# Mostrar mensajes de éxito #}
     {% if messages %}
@@ -67,7 +71,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 offset-md-3"> <!-- Centra el título en dispositivos pequeños -->
-                        <h2 class="text-center">Preguntas Frecuentes</h2>
+                        <h1 class="text-center">Preguntas Frecuentes</h1>
                     </div>
                 </div>
             </div>
