@@ -9,57 +9,66 @@
 <head>
   <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
-<div id="firebaseui-auth-container"></div>
-<h2>Formulario de Registro</h2>
-<form id="register-form">
-    <label for="email">Correo electrónico:</label><br>
-    <input type="email" id="email" name="email"><br>
-    <label for="password">Contraseña:</label><br>
-    <input type="password" id="password" name="password"><br>
-    <label for="confirm-password">Confirmar Contraseña:</label><br>
-    <input type="password" id="confirm-password" name="confirm-password"><br>
-    <input type="submit" value="Registrarse">
-</form>
-<section class="product-section">
+
+<div class="container py-5">
+  <div id="firebaseui-auth-container"></div>
+  <h2 class="text-center mb-4">Formulario de Registro</h2>
+  <form id="register-form" class="mx-auto" style="max-width: 400px;">
+    <div class="form-group">
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="password">Contraseña:</label>
+      <input type="password" id="password" name="password" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="confirm-password">Confirmar Contraseña:</label>
+      <input type="password" id="confirm-password" name="confirm-password" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-primary btn-block">Registrarse</button>
+  </form>
+</div>
+
+<section class="product-section py-5">
   <div class="container">
     <div class="row">
-      <div class="col-md-6">
-        <article class="left-block">
-          <div>
-            <h2>¿Cómo funciona la aplicación móvil?</h2>
-            <p>
+      <div class="col-md-6 d-flex align-items-stretch">
+        <div class="card">
+          <img src="{% static 'img/phone1.png' %}" class="card-img-top" alt="Imagen de la aplicación móvil">
+          <div class="card-body">
+            <h5 class="card-title">¿Cómo funciona la aplicación móvil?</h5>
+            <p class="card-text">
               Nuestra aplicación móvil es increíblemente fácil de usar; su interfaz intuitiva te sorprenderá. Registrarse dentro de la aplicación es todo lo que necesitas para comenzar. Una vez registrado, solo tienes que iniciar sesión y, ¡listo! Nuestro Sistema de Monitoreo para Contenedores de Agua (SMCA) se detectará automáticamente, permitiéndote disfrutar de todas sus funcionalidades sin ningún problema.
               Desde nuestra aplicación puedes configurar el tiempo para encender y apagar su bomba de suministro de agua. También contamos con una opción para hacer un suministro de agua eficiente y evitar el desabasto.
             </p>
           </div>
-          <div>
-            <img src="{% static 'img/phone1.png' %}" alt="Imagen de la aplicación móvil" width="146" height="174">
-          </div>
-        </article>
+        </div>
       </div>
-      <div class="col-md-6">
-        <article class="left-block">
-          <div>
-            <img src="{% static 'img/bomba.png' %}" alt="Imagen del producto" width="146" height="174">
-          </div>
-          <div>
-            <h2>¿Cómo funciona el producto?</h2>
-            <p>
+      <div class="col-md-6 d-flex align-items-stretch">
+        <div class="card">
+          <img src="{% static 'img/bomba.png' %}" class="card-img-top" alt="Imagen del producto">
+          <div class="card-body">
+            <h5 class="card-title">¿Cómo funciona el producto?</h5>
+            <p class="card-text">
               El SMCA es un sistema que utiliza un sensor que emite una onda ultrasónica, la cual es recuperada de la misma manera. Capturamos los datos obtenidos durante este proceso y los mostramos en la <a class="download1" href="#">Aplicación Móvil</a> para que el usuario los interprete fácilmente.
             </p>
           </div>
-        </article>
+        </div>
       </div>
     </div>
   </div>
-
-  <aside class="right-block">
-    <div class="container">
-      <h2>Descargar la aplicación aquí</h2>
-      <a href="#" class="btn btn-primary btn-lg download-btn">Descargar Aplicación</a>
-    </div>
-  </aside>
 </section>
+
+<section class="right-block py-5 bg-light text-center">
+  <div class="container">
+    <h2>Descargar la aplicación aquí</h2>
+    <a href="#" class="btn btn-primary btn-lg download-btn">Descargar Aplicación</a>
+  </div>
+</section>
+
 <script src="{% static 'js/credentials.js' %}"></script>
+
 {% endblock %}

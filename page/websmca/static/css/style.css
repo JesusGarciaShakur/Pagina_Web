@@ -43,9 +43,9 @@ body {
     padding-top: 20px;
     padding-bottom: 20px;
     border-radius: 5px 5px 0 0;
-    display: flex; /* Establecer como contenedor flex */
-    justify-content: center; /* Centrar el contenido horizontalmente */
-    align-items: center; /* Centrar el contenido verticalmente */
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
 }
 
 .content {

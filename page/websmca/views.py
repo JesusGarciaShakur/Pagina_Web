@@ -54,10 +54,6 @@ def contact(request):
 def product(request):
     return render(request, 'pages/product.html')
 
-def faq(request):
-    faqs = Faq.objects.all()
-    return render(request, 'pages/faq.html', {'faqs': faqs})
-
 #redirect a info legal
 def legal(request):
     return render(request, 'legal/legal_information.html')
