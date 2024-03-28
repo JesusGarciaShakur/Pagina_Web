@@ -13,6 +13,7 @@
         .faq-item h3 {
             margin-top: 0;
             color: #333;
+            font-size: 20px; /* Tamaño de fuente ajustado */
         }
 
         .faq-item p {
@@ -36,37 +37,65 @@
             margin: 0 auto;
             /* Centra el contenedor horizontalmente */
         }
-        .text-center{
+
+        .text-center {
             text-align: center;
             align-items: normal;
             white-space: nowrap;
         }
+
+        /* Estilo para el enlace "Haz una pregunta" */
+        .ask-question {
+            margin-right: 20px; /* Ajuste de margen a la derecha */
+        }
+
+        .ask-question a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        .ask-question a:hover {
+            color: #0056b3;
+        }
+
+        /* Estilo para el formulario desplegable */
+        #contact-form {
+            display: none;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        #contact-form.active {
+            display: block;
+            margin-top: 20px; /* Ajuste de margen para hacer visible el formulario */
+        }
+
+        #contact-form form {
+            margin-top: 15px;
+        }
+        
+        /* Estilo para reducir el espacio entre las preguntas frecuentes */
+        .faq-section {
+            margin-top: 20px; /* Reducir el espacio superior */
+            margin-bottom: 20px; /* Reducir el espacio inferior */
+        }
     </style>
 </head>
 
-<div class="row justify-content-center">
+<body>
 
-    {# Mostrar mensajes de éxito #}
-    {% if messages %}
-    {% for message in messages %}
-    <div class="alert-message alert-success">
-        {{ message }}
+    <div class="row justify-content-end">
+        <div class="ask-question">
+            <a href="#" id="toggle-form">Haz una pregunta</a>
+        </div>
     </div>
-    {% endfor %}
-    {% endif %}
 
-    {# Mostrar mensajes de error #}
-    {% if form.errors %}
-    {% for field, error_list in form.errors.items %}
-    {% for error in error_list %}
-    <div class="alert-message alert-error">
-        {{ error }}
-    </div>
-    {% endfor %}
-    {% endfor %}
-    {% endif %}
-
-    <div class="faq-section mt-5">
+    <div class="row justify-content-center">
         <div class="faq-section">
             <div class="container">
                 <div class="row">
@@ -75,6 +104,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="faq-item">
                 <details>
                     <summary>
@@ -142,38 +172,45 @@
             </div>
         </div>
     </div>
-</div>
 
-<div class="container1">
-    <form action="{% url 'contact' %}" id="miFormulario" method="post" class="mt-5">
-        {% csrf_token %}
-        <div class="form-group">
-            <label for="Name">Nombre:</label>
-            <input type="text" class="form-control" id="Name" name="Name" required>
-        </div>
-        <div class="form-group">
-            <label for="Email">Correo electrónico:</label>
-            <input type="email" class="form-control" id="Email" name="Email"
-                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
-        </div>
-        <div class="form-group">
-            <label for="Phone">Teléfono:</label>
-            <input type="tel" class="form-control" id="Phone" name="Phone" pattern="^\d{10}$" required>
-        </div>
-        <div class="form-group">
-            <label for="Address">Dirección:</label>
-            <input type="text" class="form-control" id="Address" name="Address" required>
-        </div>
-        <div class="form-group">
-            <label for="Question">Pregunta:</label>
-            <textarea class="form-control" id="Question" name="Question" rows="4" required></textarea>
-        </div>
-        <div class="form-group d-flex justify-content-center">
-            <button type="submit" class="btn btn-primary">Enviar pregunta</button>
-        </div>
-    </form>
-</div>
+    <div id="contact-form" class="container1">
+        <form action="{% url 'contact' %}" id="miFormulario" method="post" class="mt-5">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="Name">Nombre:</label>
+                <input type="text" class="form-control" id="Name" name="Name" required>
+            </div>
+            <div class="form-group">
+                <label for="Email">Correo electrónico:</label>
+                <input type="email" class="form-control" id="Email" name="Email"
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+            </div>
+            <div class="form-group">
+                <label for="Phone">Teléfono:</label>
+                <input type="tel" class="form-control" id="Phone" name="Phone" pattern="^\d{10}$" required>
+            </div>
+            <div class="form-group">
+                <label for="Address">Dirección:</label>
+                <input type="text" class="form-control" id="Address" name="Address" required>
+            </div>
+            <div class="form-group">
+                <label for="Question">Pregunta:</label>
+                <textarea class="form-control" id="Question" name="Question" rows="4" required></textarea>
+            </div>
+            <div class="form-group d-flex justify-content-center">
+                <button type="submit" class="btn btn-primary">Enviar pregunta</button>
+            </div>
+        </form>
+    </div>
 
-<script src="{% static 'js/dataValidation.js' %}"></script>
-<script src="{% static 'js/detail.js' %}"></script>
+    <script>
+        $(document).ready(function() {
+            $("#toggle-form").click(function(e) {
+                e.preventDefault();
+                $("#contact-form").toggleClass("active");
+            });
+        });
+    </script>
+</body>
+
 {% endblock %}
