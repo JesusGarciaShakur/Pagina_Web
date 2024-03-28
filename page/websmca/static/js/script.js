@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 window.onload = function () {
     var currentUrl = window.location.href;
     var links = document.querySelectorAll('.navbar-nav a.nav-link, .footer a');
@@ -33,3 +34,6 @@ $(document).ready(function () {
         }
     }
 });    
+=======
+console.log("hola mjdo")
+>>>>>>> origin/frontend
